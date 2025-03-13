@@ -1,0 +1,226 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3528), pid=39416, tid=30516
+#
+# JRE version:  (20.0.1+9) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (20.0.1+9-29, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:+ShowCodeDetailsInExceptionMessages jogo2DAsteroide.Main
+
+Host: Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz, 8 cores, 15G,  Windows 11 , 64 bit Build 26100 (10.0.26100.3037)
+Time: Sat Feb 15 01:08:28 2025 Hora oficial do Brasil elapsed time: 2.535755 seconds (0d 0h 0m 2s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000025622aec5a0):  JavaThread "Unknown thread" [_thread_in_vm, id=30516, stack(0x0000008053200000,0x0000008053300000)]
+
+Stack: [0x0000008053200000,0x0000008053300000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6bb95a]
+V  [jvm.dll+0x8485fa]
+V  [jvm.dll+0x84a1f5]
+V  [jvm.dll+0x84a8f3]
+V  [jvm.dll+0x280b0f]
+V  [jvm.dll+0x6b86e9]
+V  [jvm.dll+0x6ad2da]
+V  [jvm.dll+0x35adf5]
+V  [jvm.dll+0x363016]
+V  [jvm.dll+0x3b3b3e]
+V  [jvm.dll+0x3b3dc5]
+V  [jvm.dll+0x32b50a]
+V  [jvm.dll+0x32c32b]
+V  [jvm.dll+0x8112bf]
+V  [jvm.dll+0x3c0d91]
+V  [jvm.dll+0x7fcfe3]
+V  [jvm.dll+0x44c76f]
+V  [jvm.dll+0x44e0e1]
+C  [jli.dll+0x5287]
+C  [ucrtbase.dll+0x37b0]
+C  [KERNEL32.DLL+0x2e8d7]
+C  [ntdll.dll+0xbbf2c]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffe2094a098, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000025622b5d620 WorkerThread "GC Thread#0" [stack: 0x0000008053300000,0x0000008053400000] [id=34532]
+  0x0000025622b6e240 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000008053400000,0x0000008053500000] [id=34096]
+  0x0000025622b6f9f0 WorkerThread "G1 Conc#0" [stack: 0x0000008053500000,0x0000008053600000] [id=18852]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffe2012eb47]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000025622ae9dd0] Heap_lock - owner thread: 0x0000025622aec5a0
+
+Heap address: 0x0000000702000000, size: 4064 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 4 size 8 Array Of Cards #cards 16 size 48 Howl #buckets 8 coarsen threshold 3686 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 4096
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000702000000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffe20503c59]
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.008 Loaded shared library C:\Program Files\Java\jdk-20\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff633430000 - 0x00007ff633440000 	C:\Program Files\Java\jdk-20\bin\java.exe
+0x00007ffedb100000 - 0x00007ffedb363000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffeda0c0000 - 0x00007ffeda187000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffed8660000 - 0x00007ffed8a27000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffed8470000 - 0x00007ffed85bc000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffec21d0000 - 0x00007ffec21e9000 	C:\Program Files\Java\jdk-20\bin\jli.dll
+0x00007ffec78f0000 - 0x00007ffec790b000 	C:\Program Files\Java\jdk-20\bin\VCRUNTIME140.dll
+0x00007ffeda190000 - 0x00007ffeda244000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffeda350000 - 0x00007ffeda3f9000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffed9f90000 - 0x00007ffeda036000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffed99e0000 - 0x00007ffed9af6000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffed9810000 - 0x00007ffed99d9000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffebc430000 - 0x00007ffebc6c0000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.3037_none_3e09262ce333c378\COMCTL32.dll
+0x00007ffed8d60000 - 0x00007ffed8d87000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffeda870000 - 0x00007ffeda89a000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffed8b80000 - 0x00007ffed8cab000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffecfda0000 - 0x00007ffecfdab000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffed8cb0000 - 0x00007ffed8d53000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffed9f50000 - 0x00007ffed9f7f000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffec20e0000 - 0x00007ffec20ec000 	C:\Program Files\Java\jdk-20\bin\vcruntime140_1.dll
+0x00007ffe96900000 - 0x00007ffe9698e000 	C:\Program Files\Java\jdk-20\bin\msvcp140.dll
+0x00007ffe1fdf0000 - 0x00007ffe20a87000 	C:\Program Files\Java\jdk-20\bin\server\jvm.dll
+0x00007ffec42c0000 - 0x00007ffec42ca000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffed9cd0000 - 0x00007ffed9d44000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffecc5c0000 - 0x00007ffecc5f6000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffed7260000 - 0x00007ffed727a000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffeb4690000 - 0x00007ffeb469a000 	C:\Program Files\Java\jdk-20\bin\jimage.dll
+0x00007ffed5cb0000 - 0x00007ffed5ef1000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffeda400000 - 0x00007ffeda77e000 	C:\WINDOWS\System32\combase.dll
+0x00007ffedafb0000 - 0x00007ffedb086000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffec7810000 - 0x00007ffec7849000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffed85c0000 - 0x00007ffed8659000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffeb0b80000 - 0x00007ffeb0ba6000 	C:\Program Files\Java\jdk-20\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-20\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.3037_none_3e09262ce333c378;C:\Program Files\Java\jdk-20\bin\server
+
+VM Arguments:
+jvm_args: -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: jogo2DAsteroide.Main
+java_class_path (initial): C:\Users\elail\AppData\Roaming\Code\User\workspaceStorage\869d80bbc0ccda9c3f015828f01dfd69\redhat.java\jdt_ws\jogo2DAsteroide_bb6ae342\bin;d:\UFPA\Projeto Integrado II\jogo2DAsteroide\lib\postgresql-42.7.5.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 266338304                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4261412864                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 4261412864                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\GitHub CLI\;C:\Program Files\Git\cmd;C:\dev\flutter\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Users\elail\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\elail\AppData\Local\Programs\Python\Python312\;C:\Users\elail\AppData\Local\Programs\Python\Launcher\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\elail\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\elail\AppData\Local\Programs\Python\Python311\;C:\Users\elail\AppData\Local\Microsoft\WindowsApps;C:\maven\bin;C:\Users\elail\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\elail\.dotnet\tools;C:\Program Files\heroku\bin
+USERNAME=elail
+LANG=pt_BR.UTF-8
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+TMP=C:\Users\elail\AppData\Local\Temp
+TEMP=C:\Users\elail\AppData\Local\Temp
+
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 26100 (10.0.26100.3037)
+OS uptime: 1 days 16:13 hours
+Hyper-V role detected
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 165 stepping 2 microcode 0xe2, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, fma, vzeroupper, clflush, clflushopt, hv, rdtscp, f16c
+
+Memory: 4k page, system-wide physical 16252M (1637M free)
+TotalPageFile size 46636M (AvailPageFile size 143M)
+current process WorkingSet (physical memory assigned to process): 12M, peak: 12M
+current process commit charge ("private bytes"): 60M, peak: 314M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (20.0.1+9-29) for windows-amd64 JRE (20.0.1+9-29), built on 2023-03-07T13:56:11Z by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.
